@@ -1,0 +1,2 @@
+-r -s 2 -f a .pdf	bundle:ORIGINAL
+-r -s 0 -f license.txt	bundle:LICENSE

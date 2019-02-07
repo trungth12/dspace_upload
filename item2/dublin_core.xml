@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dublin_core>
+  <dcvalue element="identifier" qualifier="other">1</dcvalue>
+  <dcvalue element="contributor" qualifier="author">vx</dcvalue>
+  <dcvalue element="contributor" qualifier="editor">vcx</dcvalue>
+  <dcvalue element="title" qualifier="none">vcx</dcvalue>
+  <dcvalue element="description" qualifier="abstract">vcx</dcvalue>
+  <dcvalue element="subject" qualifier="none">vcx</dcvalue>
+  <dcvalue element="date" qualifier="issued">vcx</dcvalue>
+  <dcvalue element="date" qualifier="issued">aaaaa</dcvalue>
+  <dcvalue element="date" qualifier="issued">vxc</dcvalue>
+  <dcvalue element="publisher" qualifier="none">1</dcvalue>
+  <dcvalue element="description" qualifier="none">1</dcvalue>
+  <dcvalue element="language" qualifier="iso">1</dcvalue>
+  <dcvalue element="type" qualifier="none">vcx</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">vcx</dcvalue>
+  <dcvalue element="identifier" qualifier="citation">1</dcvalue>
+  <dcvalue element="department" qualifier="none">1</dcvalue>
+  <dcvalue element="format" qualifier="mimetype">11</dcvalue>
+  <dcvalue element="identifier" qualifier="issn">1</dcvalue>
+</dublin_core>
+

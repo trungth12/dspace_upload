@@ -1,0 +1,68 @@
+Cách thức upload file lên trên Dspace
+1.Từ file dữ liệu nhận được từ cán bộ biên mục 
+  1.1 Đối với Khóa luận - đồ án.
+     + Filter trường "Ngành" , ví dụ ngành "Công nghệ thông tin"
+	 + Vào lib.hpu.edu.vn vào mục "Trường Đại học dân lập Hải phòng" click tiếp vào "Công nghệ thông tin để lấy chỉ số cuối URL (16739) 
+	 + Copy toàn bộ dữ liệu đã filter vào file Csv mẫu (
+	 ) (lưu ý khi bật file csv phải để UTF 8 và dấu ',' comma)
+	 + Lưu file CSV mẫu đó với tên bằng với chỉ số URL bên trên (ở đây là 16739) ( thường thì lưu trong thư mục có tên đặt theo ngày đẩy lên để không bị nhầm lẫn)
+  1.2 Đối với sách số hóa.
+	 + Sách số hóa không có ngành đi kèm mà hiển thị bộ sưu tập nên phải nhóm toàn bộ các bộ sưu tập có số bắt đầu giống nhau vào 1 group,( ví dụ 546, 545, 543 nhóm hết về 500) sau đó filter
+	 + Vào lib.hpu.edu.vn chọn vào bộ sưu tập mà ví dụ ở đây là 500, click tiếp vào cấp dưới của  500 là Khoa học tự nhiên sẽ hiển thị chỉ số cuối URL (2132)
+	 + Copy toàn bộ dữ liệu đã filter vào file Csv mẫu (D:\KhoaLuan_Doan_2014) (lưu ý khi bật file csv phải để UTF 8 và dấu ',' comma)
+	 + Lưu file CSV mẫu đó với tên bằng với chỉ số URL bên trên (ở đây là 2132) ( thường thì lưu trong thư mục có tên đặt theo ngày đẩy lên để không bị nhầm lẫn)
+
+2. Câu lệnh chuyển từ CSV ra thư mục item (máy client)
+ 2.1 Sửa code trong file export.bat (D:\KhoaLuan_Doan_2014) bằng đoạn code dưới đây:
+java -jar mappertool.jar -d D:\KhoaLuan_Doan_2014\24_03_2014\2132 -l F:\Dspace_backup\Dulieutest\license.txt -s D:\KhoaLuan_Doan_2014\24_03_2014\2132.csv -a 0
+
+Giải thích:
+-d D:\KhoaLuan_Doan_2014\24_03_2014\2132 : Đây là thư mục xuất các dữ liệu biên mục (item1, item2,...)
+-l F:\Dspace_backup\Dulieutest\license.txt : Đây là đường dẫn đến file license.txt (bản quyền và chính sách sử dụng)
+-s D:\KhoaLuan_Doan_2014\24_03_2014\2132.csv : Đây là đường dẫn đến file biên mục csv
+-a 0 : Số hiệu assetstore, nếu là khóa luận thì 2, không thì 0
+
+2.2 Click kép file export.bat
+
+3. Bước upload toàn bộ file Item được xuất ra và file pdf từ máy cá nhân lên máy chủ. (Sử dụng filezilla)
++ Sử dụng FileZilla Client để tiến hành upload. (Server: 203.162.238.52. Tài khoản: minhnq, pass: lgcmkmm19001570Abc987, rồi connect)
++ Upload file Item vào thư mục "D:\dungth\doan_2014_minhnq" trên máy chủ ( nên tạo thư mục mang tên ngày đẩy ngay sau ...minnq)
++ Đối với sách số hóa upload vào thư mục "D:\dungth\data" trên máy chủ.
++ Đối với Đồ án, khóa luận tốt nghiệp upload vào thư mục "D:\dungth\data\KHOALUAN" trên máy chủ.
+
+4. Câu lệnh import (Dùng trên máy chủ Dspace) 
++Vào comandline paste đoạn code dưới (lưu ý là phải cd đến thư mục bin trong D:\dungth\dspace\bin)
+dspace import -a -e minhnq@hpu.edu.vn -s D:\dungth\doan_2014_minhnq\22_03_2016\16736 -c 123456789/16736 -m D:\dungth\doan_2014_minhnq\errortest\22_03_2016\16736.m
+
+Giải thích:
+-e minhnq@hpu.edu.vn: email người đẩy tài liệu
+-s D:\dungth\doan_2014_minhnq\14596: Đường dẫn đến thư mục item được xuất ra từ câu lệnh 1
+-c 123456789/16736: Số hiệu collection được đẩy tài liệu (có thể xem bằng cách vào web và trỏ vào đường dẫn collection)
+-m D:\dungth\doan_2014_minhnq\errortest\14596.m: Địa chỉ mapfile (được tạo khi chạy lệnh), nó được dùng nếu có lỗi thì vẫn có thể tiếp tục bằng cách thêm tham số -R
+
+5.Câu lệnh index để có thể tạo search theo bộ sưu tập trên Dspace
+Vào commandline paste đoạn code dưới.(lưu ý là phải cd đến thư mục bin trong D:\dspacehpu-5.4\bin)
+
+dspace index-lucene-update --resume
+
+(resume sử dụng khi lỗi file và đè lại file.m)
+
+6. Thống kê 
+dspace stat-monthly
+dspace stat-report-monthly
+vào thư mục D:\dungth\dspace\reports trên server để bật file log xem thống kê 
+
+
+# Danh sách người dùng tải và lượt tải của cách đây 1 tháng
+http://lib.hpu.edu.vn/solr/statistics/select?indent=on&version=2.2&start=0&rows=10&fl=*%2Cscore&qt=standard&wt=standard&explainOther=&hl.fl=&facet=true&q=dns:localhost.+type:0+bundleName:ORIGINAL+time:[NOW-1MONTH TO NOW]&facet.field=epersonid
+
+# Danh sách người dùng xem và lượt xem của cách đây 1 tháng
+http://lib.hpu.edu.vn/solr/statistics/select?indent=on&version=2.2&start=0&rows=10&fl=*%2Cscore&qt=standard&wt=standard&explainOther=&hl.fl=&facet=true&q=dns:localhost.+type:0+bundleName:ORIGINAL+time:[NOW-1MONTH TO NOW]&facet.field=epersonid
+
+Khóa luận được đẩy lên Dspace
+Bảng Bitstream trong csdl lưu trữ toàn bộ dữ liệu biên mục của các file đẩy lên Dspace
+SELECT *
+  FROM bitstream
+  where name like '%.pdf%'
+  and deleted=false
+  and store_number=2;

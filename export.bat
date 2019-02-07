@@ -1,0 +1,1 @@
+java -jar HPUDspaceUpload.jar -d C:\Users\TrungTH\Dspace_overview -l C:\Users\TrungTH\Dspace_overview\license.txt -s C:\Users\TrungTH\Dspace_overview\filemau.csv 
