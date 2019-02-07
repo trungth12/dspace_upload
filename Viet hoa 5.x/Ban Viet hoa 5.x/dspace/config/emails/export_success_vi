@@ -1,0 +1,18 @@
+# Email sent to DSpace users when they successfully export an item or collection.
+#
+# Parameters: {0} is expanded to a special URL
+#             {1} configurable time (hours) an export file will be kept
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Thư viện số - Tài liệu bạn yêu cầu xuất khẩu đã sẵn sàng cho việc tải về.
+Tài liệu bạn yêu cầu xuất khẩu đã sẵn sàng cho việc tải về.
+
+Bạn có thể tải tập tin từ đường dẫn sau:
+{0}
+
+Lưu ý: Tập tin sẽ tồn tại trên hệ thống trong vòng {1} giờ.  
+
+
+Thư viện số
+

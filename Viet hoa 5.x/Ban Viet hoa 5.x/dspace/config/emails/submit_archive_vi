@@ -1,0 +1,19 @@
+# Item Archived email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  handle 
+#
+Subject: Thư viện số - Tài liệu đã được duyệt và lưu trữ
+
+Tài liệu bạn cập nhật: {0}
+
+Vào bộ sưu tập: {1}
+
+Tài liệu bạn cập nhật đã được duyệt và lưu trữ trong Thư viện số,
+đồng thời được gán định danh:
+{2}
+
+Xin cảm ơn!
+
+Thư viện số

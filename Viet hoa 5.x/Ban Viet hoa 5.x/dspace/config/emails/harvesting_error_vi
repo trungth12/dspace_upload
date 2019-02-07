@@ -1,0 +1,20 @@
+# E-mail sent to designated address when a harvest process fails
+#
+# Parameters: {0} Collection id
+#             {1} Date & time
+#             {2} Status flag
+#             {3} Exception message
+#             {4} Exception stack trace
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Thư viện số - Thừa kế dữ liệu lỗi
+Bộ sưu tập {0} bị lỗi khi thừa kế dữ liệu:
+
+Ngày:       	{1}
+Trạng thái: 	{2}
+
+{3}
+
+Lỗi:
+{4}

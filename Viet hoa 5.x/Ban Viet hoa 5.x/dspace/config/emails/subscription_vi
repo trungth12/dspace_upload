@@ -1,0 +1,12 @@
+# E-mail sent to DSpace users when new items appear in collections they are
+# subscribed to
+#
+# Parameters: {0} is the details of the new collections and items
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Thông tin tài liệu mới từ Thư viện số
+Các tài liệu mới đang có sẵn trên các bộ sưu tập mà bạn theo dõi:
+
+{0}
+
+Thư viện số

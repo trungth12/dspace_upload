@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!--
+
+    The contents of this file are subject to the license and copyright
+    detailed in the LICENSE and NOTICE files at the root of the source
+    tree and available online at
+
+    http://www.dspace.org/license/
+
+-->
+<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://apache.org/cocoon/i18n/2.1">
+
+    <!--
+		The format used by all keys is as follows
+
+		xmlui.<Aspect>.<Java Class>.<name>
+
+		There are a few exceptions to this naming format,
+		1) Some general keys are in the xmlui.general namespace
+		   because they are used very frequently.
+		2) Some general keys which are specific to a particular aspect
+		   may be found at xmlui.<Aspect> without specifiying a
+		   particular java class.
+		-->
+
+
+    <!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
+
+
+
+
+    <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">T&#225;c gi&#7843;</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Lo&#7841;i t&#224;i li&#7879;u</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">N&#259;m xu&#7845;t b&#7843;n</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">N&#259;m xu&#7845;t b&#7843;n</message>
+
+
+    <!-- Site Leve Recently Added Content -->
+    <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">T&#224;i li&#7879;u m&#7899;i c&#7853;p nh&#7853;t</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">Xem th&#234;m</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.head">{0}: T&#224;i li&#7879;u m&#7899;i c&#7853;p nh&#7853;t</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.trail">T&#224;i li&#7879;u m&#7899;i c&#7853;p nh&#7853;t</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.recent.head">T&#224;i li&#7879;u m&#7899;i c&#7853;p nh&#7853;t</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Lo&#7841;i</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">Nh&#224; xu&#7845;t b&#7843;n</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">C&#7845;p tr&#234;n</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Nh&#243;m k&#7871;t qu&#7843; theo</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">Kh&#244;ng</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Nh&#224; xu&#7845;t b&#7843;n</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">&#272;&#417;n v&#7883;</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">B&#7897; s&#432;u t&#7853;p</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">T&#249;ng th&#432;</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Duy&#7879;t theo: T&#225;c gi&#7843;</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Duy&#7879;t theo: Nhan &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Duy&#7879;t theo: Ch&#7911; &#273;&#7873;</message>
+        
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Duy&#7879;t theo: T&#243;m t&#7855;t</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Duy&#7879;t theo: Series</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">Duy&#7879;t theo: Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_identifier_browse">Duy&#7879;t theo: Identifier</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_language_browse">Duy&#7879;t theo: Language (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_keyword_browse">Duy&#7879;t theo: Keyword</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">Duy&#7879;t theo: Scientific Name</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">Duy&#7879;t theo: Contributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">Duy&#7879;t theo: Creator</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">Duy&#7879;t theo: Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">Duy&#7879;t theo: Description</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Duy&#7879;t theo: Relation</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Duy&#7879;t theo: Mime-Type</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">Duy&#7879;t theo: Other Contributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Duy&#7879;t theo: Ng&#432;&#7901;i h&#432;&#7899;ng d&#7851;n</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Duy&#7879;t theo: Department</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Duy&#7879;t theo: N&#259;m xu&#7845;t b&#7843;n</message>
+
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">T&#225;c gi&#7843;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Nhan &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">N&#259;m xu&#7845;t b&#7843;n</message>
+
+
+
+    <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Hi&#7875;n th&#7883; t&#224;i li&#7879;u t&#7915; {0}-{1}</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.type_author">L&#7885;c theo: t&#225;c gi&#7843;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">T&#225;c gi&#7843;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">T&#225;c gi&#7843;</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">L&#7885;c theo: Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Ch&#7911; &#273;&#7873;</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">N&#259;m xu&#7845;t b&#7843;n</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.startswith">b&#7855;t &#273;&#7847;u v&#7899;i</message>
+    <message key="xmlui.Discovery.AbstractSearch.startswith.help">Ho&#7863;c nh&#7853;p k&#253; t&#7921;:</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.head">S&#7855;p x&#7871;p:</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.relevance">Li&#234;n quan</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_desc">Nhan &#273;&#7873; gi&#7843;m d&#7847;n</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_desc">N&#259;m xu&#7845;t b&#7843;n gi&#7843;m d&#7847;n</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_asc">Nhan &#273;&#7873; t&#259;ng d&#7847;n</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_asc">N&#259;m xu&#7845;t b&#7843;n t&#259;ng d&#7847;n</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.rpp">K&#7871;t qu&#7843; m&#7895;i trang:</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.add-filter">Th&#234;m b&#7897; l&#7885;c</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.apply-filters">&#193;p d&#7909;ng</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.remove-filter">X&#243;a</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.new-filters.head">B&#7897; l&#7885;c m&#7899;i:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.current-filters.head">B&#7897; l&#7885;c hi&#7879;n t&#7841;i:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.display">Th&#234;m b&#7897; l&#7885;c</message>
+
+    <message key="xmlui.discovery.SearchFacetFilter.no-results">Kh&#244;ng t&#236;m th&#7845;y</message>
+
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Kh&#225;m ph&#225;</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... Xem th&#234;m</message>
+
+
+    <message key="xmlui.Discovery.SimpleSearch.search_scope">T&#236;m</message>
+    <message key="xmlui.discovery.SimpleSearch.search_label">T&#236;m</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_head">B&#7897; l&#7885;c</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_help">S&#7917; d&#7909;ng b&#7897; l&#7885;c &#273;&#7875; thu h&#7865;p k&#7871;t qu&#7843;.</message>
+
+    <message key="xmlui.Discovery.SimpleSearch.filter.contains">Ch&#7913;a</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.equals">B&#7857;ng</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.authority">ID</message>
+	<message key="xmlui.Discovery.SimpleSearch.filter.notcontains">Kh&#244;ng ch&#7913;a</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notequals">Kh&#244;ng b&#7857;ng</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notauthority">Kh&#244;ng ID</message>
+    
+    <message key="xmlui.Discovery.RelatedItems.head">T&#224;i li&#7879;u li&#234;n quan</message>
+    <message key="xmlui.Discovery.RelatedItems.help">Hi&#7875;n th&#7883; t&#224;i li&#7879;u li&#234;n quan theo nhan &#273;&#7873;, t&#225;c gi&#7843;, ch&#7911; &#273;&#7873;.</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head1_community">Hi&#7875;n th&#7883; {0} trong t&#7893;ng s&#7889; {1} k&#7871;t qu&#7843; c&#7911;a &#273;&#417;n v&#7883;: {2}. <span class="searchTime">({3} gi&#226;y)</span></message>
+   	<message key="xmlui.Discovery.AbstractSearch.head1_collection">Hi&#7875;n th&#7883; {0} trong t&#7893;ng s&#7889;  {1} k&#7871;t qu&#7843; c&#7911;a b&#7897; s&#432;u t&#7853;p: {2}. <span class="searchTime">({3} gi&#226;y)</span></message>
+   	<message key="xmlui.Discovery.AbstractSearch.head1_none">Hi&#7875;n th&#7883; {0} trong t&#7893;ng s&#7889; {1} k&#7871;t qu&#7843;. <span class="searchTime">({2} gi&#226;y)</span></message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head2">&#272;&#417;n v&#7883; ho&#7863;c b&#7897; s&#432;u t&#7853;p ph&#249; h&#7907;p v&#7899;i truy v&#7845;n</message>
+   	<message key="xmlui.Discovery.AbstractSearch.head3">T&#224;i li&#7879;u ph&#249; h&#7907;p v&#7899;i truy v&#7845;n</message>
+
+   	<message key="xmlui.Discovery.SimpleSearch.did_you_mean">C&#243; ph&#7843;i l&#224;: </message>
+
+</catalogue>

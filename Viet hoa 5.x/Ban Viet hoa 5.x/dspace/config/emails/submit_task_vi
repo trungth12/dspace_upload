@@ -1,0 +1,23 @@
+# Workflow task email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  submitter's name
+# {3}  Description of task
+# {4}  link to 'my DSpace' page 
+#
+Subject: Thư viện số - Bạn có nhiệm vụ mới
+
+Một tài liệu mới đã được cập nhật:
+
+Nhan đề:        {0}
+Bộ sưu tập:   {1}
+Nhập bởi: {2}
+
+{3}
+
+Để nhận công việc này, hãy vào "Trang cá nhân" của bạn:  {4}
+
+Xin cảm ơn!
+
+Thư viện số

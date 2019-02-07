@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE input-forms SYSTEM "input-forms.dtd">
+ <!-- Phan Ngoc Dong - 0902.815518 - dongpn@dlu.edu.vn   -->
+
+<input-forms>
+
+ <!-- The form-map maps collection handles to forms. DSpace does not       -->
+ <!-- require that a collection's name be unique, even within a community .-->
+ <!-- DSpace does however insure that each collection's handle is unique.  -->
+ <!-- Form-map provides the means to associate a unique collection name    -->
+ <!-- with a form. The form-map also provides the special handle "default" -->
+ <!-- (which is never a collection), here mapped to "traditional". Any     -->
+ <!-- collection which does not appear in this map will be associated with -->
+ <!-- the mapping for handle "default".                                    -->
+
+ <form-map>
+   <name-map collection-handle="default" form-name="traditional" />
+ </form-map>
+
+
+ <!-- The form-definitions map lays out the detailed definition of all the -->
+ <!-- submission forms.Each separate form set has a unique name as an      -->
+ <!-- attribute. This name matches one of the names in the form-map. One   -->
+ <!-- named form set has the name "traditional"; as this name suggests,    -->
+ <!-- it is the old style and is also the default, which gets used when    -->
+ <!-- the specified collection has no correspondingly named form set.      -->
+ <!--                                                                      -->
+ <!-- Each form set contains an ordered set of pages; each page defines    -->
+ <!-- one submission metadata entry screen. Each page has an ordered list  -->
+ <!-- of field definitions, Each field definition corresponds to one       -->
+ <!-- metatdata entry (a so-called row), which has a DC element name, a    -->
+ <!-- displayed label, a text string prompt which is called a hint , and   -->
+ <!-- an input-type. Each field also may hold optional elements: DC        -->
+ <!-- qualifier name, a repeatable flag, and a text string whose presence  -->
+ <!-- serves as a 'this field is required' flag.                           -->
+
+ <form-definitions>
+
+   <form name="traditional">
+     <page number="1">
+	   <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Nhan &#273;&#7873;</label>
+         <input-type>textarea</input-type>
+         <hint>Nh&#7853;p nhan &#273;&#7873; ch&#237;nh c&#7911;a t&#224;i li&#7879;u.</hint>
+         <required>B&#7841;n ph&#7843;i nh&#7853;p m&#7897;t nhan &#273;&#7873; ch&#237;nh c&#7911;a t&#224;i li&#7879;u n&#224;y.</required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier>alternative</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>C&#225;c nhan &#273;&#7873; kh&#225;c</label>
+         <input-type>onebox</input-type>
+         <hint>N&#7871;u t&#224;i li&#7879;u c&#243; nhan &#273;&#7873; kh&#225;c, vui l&#242;ng nh&#7853;p v&#224;o &#273;&#226;y.</hint>
+         <required></required>
+       </field>
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>T&#225;c gi&#7843;</label>
+         <input-type>name</input-type>
+         <hint>Nh&#7853;p v&#224;o &#273;&#226;y t&#234;n t&#225;c gi&#7843; c&#7911;a t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+	 <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>advisor</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Ng&#432;&#7901;i h&#432;&#7899;ng d&#7851;n (D&#249;ng cho Lu&#7853;n v&#259;n)</label>
+         <input-type>name</input-type>
+         <hint>Nh&#7853;p v&#224;o &#273;&#226;y t&#234;n Ng&#432;&#7901;i h&#432;&#7899;ng d&#7851;n c&#7911;a t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+	   <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+		 <dc-qualifier>other</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Ng&#432;&#7901;i c&#243; li&#234;n quan / Ng&#432;&#7901;i d&#7883;ch</label>
+         <input-type>name</input-type>
+         <hint>Nh&#7853;p v&#224;o &#273;&#226;y Ng&#432;&#7901;i d&#7883;ch t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+
+     
+    </page>
+	 <page number="2">
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Ng&#224;y th&#225;ng n&#259;m xu&#7845;t b&#7843;n</label>
+         <input-type>date</input-type>
+         <hint>Vui l&#242;ng nh&#7853;p th&#7901;i gian c&#7911;a l&#7847;n xu&#7845;t b&#7843;n ho&#7863;c c&#244;ng b&#7889; tr&#432;&#7899;c &#273;&#226;y. B&#7841;n c&#243; th&#7875; b&#7887; tr&#7889;ng ng&#224;y v&#224;/ho&#7863;c th&#225;ng n&#7871;u kh&#244;ng c&#243;.</hint>
+         <required>&#205;t nh&#7845;t b&#7841;n ph&#7843;i nh&#7853;p n&#259;m.</required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>publisher</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Nh&#224; xu&#7845;t b&#7843;n</label>
+         <input-type>onebox</input-type>
+         <hint>Nh&#7853;p t&#234;n nh&#224; xu&#7845;t b&#7843;n c&#7911;a l&#7847;n xu&#7845;t b&#7843;n tr&#432;&#7899;c &#273;&#226;y c&#7911;a t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier>citation</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Tr&#237;ch d&#7851;n</label>
+         <input-type>onebox</input-type>
+         <hint>Nh&#7853;p tr&#237;ch d&#7851;n chu&#7849;n cho l&#7847;n xu&#7845;t b&#7843;n tr&#432;&#7899;c &#273;&#226;y c&#7911;a t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>ispartofseries</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>S&#7889; t&#249;ng th&#432;/B&#225;o c&#225;o.</label>
+         <input-type>series</input-type>
+         <hint>Nh&#7853;p t&#249;ng th&#432; v&#224; s&#7889; &#273;&#432;&#7907;c d&#417;n v&#7883; c&#7911;a b&#7841;n &#7845;n &#273;&#7883;nh cho t&#224;i li&#7879;u n&#224;y.</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+         <repeatable>true</repeatable>
+         <label>&#272;&#7883;nh danh</label>
+         <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+         <hint>N&#7871;u t&#224;i li&#7879;u c&#243; s&#7889; ho&#7863;c m&#227; x&#225;c minh g&#7855;n li&#7873;n v&#7899;i n&#243;, vui l&#242;ng nh&#7853;p d&#432;&#7899;i &#273;&#226;y lo&#7841;i v&#224; s&#7889; ho&#7863;c m&#227; th&#7921;c.</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>type</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Lo&#7841;i</label>
+         <input-type value-pairs-name="common_types">dropdown</input-type>
+         <hint> Ch&#7885;n (c&#225;c) lo&#7841;i n&#7897;i dung t&#224;i li&#7879;u. &#272;&#7875; ch&#7885;n nhi&#7873;u h&#417;n m&#7897;t gi&#225; tr&#7883; trong danh s&#225;ch, b&#7841;n h&#227;y nh&#7845;n gi&#7919; ph&#237;m "CTRL" ho&#7863;c "Shift".</hint>
+         <required></required>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>language</dc-element>
+         <dc-qualifier>iso</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Ng&#244;n ng&#7919;</label>
+         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+         <hint>Ch&#7885;n ng&#244;n ng&#7919; c&#7911;a n&#7897;i dung ch&#237;nh t&#224;i li&#7879;u. N&#7871;u ng&#244;n ng&#7919; b&#7841;n c&#7847;n kh&#244;ng c&#243; trong danh s&#225;ch d&#432;&#7899;i &#273;&#226;y, vui l&#242;ng ch&#7885;n "Kh&#225;c". N&#7871;u n&#7897;i dung kh&#244;ng th&#7921;c s&#7921; c&#243; ng&#244;n ng&#7919; (v&#237; d&#7909;, n&#7871;u n&#7897;i dung l&#224; m&#7897;t t&#7853;p d&#7919; li&#7879;u ho&#7863;c h&#236;nh &#7843;nh) vui l&#242;ng ch&#7885;n 'N/A'.</hint>
+         <required></required>
+       </field>
+     </page>
+
+     <page number="3">
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <!-- An input-type of twobox MUST be marked as repeatable -->
+         <repeatable>true</repeatable>
+         <label>T&#7915; kho&#225;</label>
+         <input-type>twobox</input-type>
+         <hint> Nh&#7853;p t&#7915; kho&#225; ho&#7863;c ch&#7911; &#273;&#7873; th&#237;ch h&#7907;p d&#432;&#7899;i &#273;&#226;y. </hint>
+         <required></required>
+         <vocabulary>srsc</vocabulary>
+       </field>
+
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>abstract</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>T&#243;m t&#7855;t</label>
+         <input-type>textarea</input-type>
+         <hint> Nh&#7853;p d&#432;&#7899;i &#273;&#226;y ph&#7847;n t&#243;m t&#7855;t c&#7911;a t&#224;i li&#7879;u. . </hint>
+         <required></required>
+       </field>
+
+	    <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>tableofcontents</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>M&#7909;c l&#7909;c</label>
+         <input-type>textarea</input-type>
+         <hint> Nh&#7853;p d&#432;&#7899;i &#273;&#226;y ph&#7847;n m&#7909;c l&#7909;c c&#7911;a t&#224;i li&#7879;u. . </hint>
+         <required></required>
+       </field>
+<!--
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>sponsorship</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Nh&#224; t&#224;i tr&#7907;</label>
+         <input-type>textarea</input-type>
+         <hint> Nh&#7853;p t&#234;n nh&#224; t&#224;i tr&#7907; v&#224;/ho&#7863;c m&#227; t&#224;i ch&#237;nh v&#224;o h&#7897;p tho&#7841;i d&#432;&#7899;i &#273;&#226;y. </hint>
+         <required></required>
+       </field>
+-->
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>M&#244; t&#7843;</label>
+         <input-type>textarea</input-type>
+         <hint> Nh&#7853;p m&#244; t&#7843; ho&#7863;c &#253; ki&#7871;n v&#224;o h&#7897;p tho&#7841;i n&#224;y. </hint>
+         <required></required>
+       </field>
+     </page>
+   </form>
+
+   <form name="one">
+     <page number="1">
+       <field>
+		 <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>M&#7897;t: T&#225;c gi&#7843;</label>
+                 <input-type>name</input-type>
+         <hint>Nh&#7853;p d&#432;&#7899;i &#273;&#226;y t&#234;n t&#225;c gi&#7843; c&#7911;a t&#224;i li&#7879;u n&#224;y. </hint>
+         <required></required>
+       </field>
+      </page>
+    </form>
+ </form-definitions>
+
+
+ <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
+ <!-- The form-value-pairs element holds child elements named 'value-pairs' -->
+ <!-- A 'value-pairs' element has a value-pairs-name and a dc-term          -->
+ <!-- attribute. The dc-term attribute specifies which to which Dublin Core -->
+ <!-- Term this set of value-pairs applies.                                 -->
+ <!--     Current dc-terms are: identifier-pairs, type-pairs, and           -->
+ <!--     language_iso-pairs. The name attribute matches a name             -->
+ <!--     in the form-map, above.                                           -->
+ <!-- A value-pair contains one 'pair' for each value displayed in the list -->
+ <!-- Each pair contains a 'displayed-value' element and a 'stored-value'   -->
+ <!-- element. A UI list displays the displayed-values, but the program     -->
+ <!-- stores the associated stored-values in the database.                  -->
+
+ <form-value-pairs>
+   <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
+     <pair>
+       <displayed-value>ISSN</displayed-value>
+       <stored-value>issn</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kh&#225;c</displayed-value>
+       <stored-value>other</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>ISMN</displayed-value>
+       <stored-value>ismn</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Gov't Doc #</displayed-value>
+       <stored-value>govdoc</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>URI</displayed-value>
+       <stored-value>uri</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>ISBN</displayed-value>
+       <stored-value>isbn</stored-value>
+     </pair>
+	  <pair>
+       <displayed-value>DOI</displayed-value>
+       <stored-value>doi</stored-value>
+     </pair>
+   </value-pairs>
+
+   <value-pairs value-pairs-name="common_types" dc-term="type">
+     <pair>
+       <displayed-value>Ho&#7841;t h&#236;nh</displayed-value>
+       <stored-value>Animation</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#224;i tr&#237;ch</displayed-value>
+       <stored-value>Article</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>S&#225;ch</displayed-value>
+       <stored-value>Book</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ch&#432;&#417;ng</displayed-value>
+       <stored-value>Book chapter</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>T&#7853;p d&#7919; li&#7879;u</displayed-value>
+       <stored-value>Dataset</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>M&#7909;c ti&#234;u h&#7885;c</displayed-value>
+       <stored-value>Learning Object</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>H&#236;nh &#7843;nh</displayed-value>
+       <stored-value>Image</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>H&#236;nh &#7843;nh, 3-D</displayed-value>
+       <stored-value>Image, 3-D</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#7843;n &#273;&#7891;</displayed-value>
+       <stored-value>Map</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#7843;n nh&#7841;c</displayed-value>
+       <stored-value>Musical Score</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>K&#7871; ho&#7841;ch</displayed-value>
+       <stored-value>Plan or blueprint</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#224;i nghi&#234;n c&#7913;u s&#417; b&#7897; tr&#432;&#7899;c khi xu&#7845;t b&#7843;n</displayed-value>
+       <stored-value>Preprint</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#224;i thuy&#7871;t tr&#236;nh </displayed-value>
+       <stored-value>Presentation</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>&#194;m thanh</displayed-value>
+       <stored-value>Recording, acoustical</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>&#194;m nh&#7841;c</displayed-value>
+       <stored-value>Recording, musical</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>&#194;m</displayed-value>
+       <stored-value>Recording, oral</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ph&#7847;n m&#7873;m</displayed-value>
+       <stored-value>Software</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>B&#225;o c&#225;o k&#7929; thu&#7853;t</displayed-value>
+       <stored-value>Technical Report</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Lu&#7853;n v&#259;n</displayed-value>
+       <stored-value>Thesis</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Video</displayed-value>
+       <stored-value>Video</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Nghi&#234;n c&#7913;u khoa h&#7885;c</displayed-value>
+       <stored-value>Working Paper</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kh&#225;c</displayed-value>
+       <stored-value>Other</stored-value>
+     </pair>
+   </value-pairs>
+
+   <!-- default language order: (from dspace 1.2.1)
+        "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
+     -->
+   <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
+      <pair>
+       <displayed-value>Ti&#7871;ng Vi&#7879;t</displayed-value>
+       <stored-value>vi</stored-value>
+      </pair>
+	  <pair>
+       <displayed-value>Ti&#7871;ng Anh (M&#7929;)</displayed-value>
+       <stored-value>en_US</stored-value>
+      </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng Anh</displayed-value>
+       <stored-value>en</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng T&#226;y Ban Nha</displayed-value>
+       <stored-value>es</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng &#272;&#7913;c</displayed-value>
+       <stored-value>de</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng Ph&#225;p</displayed-value>
+       <stored-value>fr</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng &#221;</displayed-value>
+       <stored-value>it</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng Nh&#7853;t</displayed-value>
+       <stored-value>ja</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ti&#7871;ng Trung Qu&#7889;c</displayed-value>
+       <stored-value>zh</stored-value>
+     </pair>
+	 <pair>
+	  <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+     </pair>
+     <pair>
+       <displayed-value>(Kh&#225;c)</displayed-value>
+       <stored-value>other</stored-value>
+     </pair>
+   </value-pairs>
+
+    </form-value-pairs>
+
+</input-forms>

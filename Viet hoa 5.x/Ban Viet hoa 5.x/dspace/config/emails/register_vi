@@ -1,0 +1,14 @@
+# E-mail sent to DSpace users when they register for an account
+#
+# Parameters: {0} is expanded to a special registration URL
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Đăng ký tài khoản Thư viện số
+Để hoàn tất quá trình đăng ký tài khoản Thư viện số, bạn hãy nhấp vào liên kết sau và khai báo thông tin:
+
+  {0}
+
+Nếu bạn cần trợ giúp, vui lòng liên hệ quản trị hệ thống.
+
+Thư viện số DSpace

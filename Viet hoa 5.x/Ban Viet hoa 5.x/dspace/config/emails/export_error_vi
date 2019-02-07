@@ -1,0 +1,19 @@
+# Email sent to DSpace users when they successfully export an item or collection.
+#
+# Parameters: {0} the export error
+#             {1} the URL to the feedback page
+#             
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Thư viện số - Tài liệu bạn yêu cầu xuất khẩu không thành công.
+Tài liệu bạn yêu cầu xuất khẩu không thành công, bởi lý do sau:
+ {0}
+
+Để biết thêm thông tin, vui lòng liên hệ quản trị hệ thống:
+ {1}
+
+
+
+Thư viện số
+

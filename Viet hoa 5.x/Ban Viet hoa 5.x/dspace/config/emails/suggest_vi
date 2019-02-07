@@ -1,0 +1,24 @@
+# E-mail sent with the information filled out in a suggest form.
+#
+# Parameters: {0} recipient name
+#             {1} sender name
+#             {2} repository name
+#             {3} item title
+#             {4} item handle URI
+#             {5} item local URL - may be used in lieu of {4} if not using handle server
+#             {6} collection name
+#             {7} sender message 
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Một tài liệu bạn quan tâm có trong Thư viện số
+
+Xin chào {0},
+
+{1} yêu cầu chúng tôi gửi cho bạn email này liên quan đến một tài liệu có trong {2}.
+
+Nhan đề: {3}
+Vị trí: {5}
+Trong Bộ sưu tập: {6}
+Lời nhắn: {7}
+
+Thư viện số

@@ -1,0 +1,19 @@
+# Email sent to DSpace users when they BTE batch import fails.
+#
+# Parameters: {0} the export error
+#             {1} the URL to the feedback page
+#             
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Thư viện số - Nhập khẩu theo lô không thành công.
+Quá trình nhập khẩu biểu ghi theo lô từ website không thành công, bởi lý do:
+ {0}
+
+Để biết thêm thông tin, vui lòng liên hệ quản trị hệ thống:
+ {1}
+
+
+
+Thư viện số DSpace
+

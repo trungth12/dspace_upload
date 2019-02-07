@@ -1,0 +1,22 @@
+# Workflow curation task notification email message
+#
+# {0}  Title of submission
+# {1}  Name of collection
+# {2}  Submitter's name
+# {3}  Name of task operating
+# {4}  Task result
+# {5}  Workflow action taken
+#
+Subject: Thư viện số - Báo cáo Tiến trình công việc
+
+Nhan đề:         {0}
+Bộ sưu tập:    {1}
+Nhập bởi:  {2}
+
+Tiến trình công ciệc {3} đã thực hiện với các kết quả:
+
+{4}
+
+Hành động: {5}
+
+Thư viện số
